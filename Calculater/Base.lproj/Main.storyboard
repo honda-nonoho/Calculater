@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,89 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bRP-XS-jNz">
+                                <rect key="frame" x="30" y="363" width="354" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="足し算"/>
+                                    <segment title="引き算"/>
+                                    <segment title="掛け算"/>
+                                    <segment title="割り算"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJ5-eZ-bbo">
+                                <rect key="frame" x="30" y="301" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBp-Ol-qvl">
+                                <rect key="frame" x="30" y="237" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果は..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nT-YI-bLn">
+                                <rect key="frame" x="30" y="171" width="354" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdW-XK-QMY">
+                                <rect key="frame" x="30" y="424" width="354" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="計算">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U7f-Ix-O4H"/>
+                                    <action selector="didTapcalculator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ei3-nE-n7o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bRP-XS-jNz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9D8-FP-vyk"/>
+                            <constraint firstItem="ZdW-XK-QMY" firstAttribute="top" secondItem="bRP-XS-jNz" secondAttribute="bottom" constant="30" id="ASs-DB-iSP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9nT-YI-bLn" secondAttribute="trailing" constant="30" id="B74-A9-fZN"/>
+                            <constraint firstItem="ZdW-XK-QMY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EkT-9P-yQo"/>
+                            <constraint firstItem="qBp-Ol-qvl" firstAttribute="top" secondItem="9nT-YI-bLn" secondAttribute="bottom" constant="30" id="Eva-dM-Eky"/>
+                            <constraint firstItem="ZdW-XK-QMY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OVW-5n-Apc"/>
+                            <constraint firstItem="HJ5-eZ-bbo" firstAttribute="leading" secondItem="bRP-XS-jNz" secondAttribute="leading" id="R7n-cJ-C0a"/>
+                            <constraint firstItem="ZdW-XK-QMY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="VUN-cA-TAb"/>
+                            <constraint firstItem="ZdW-XK-QMY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wn5-Yv-maC"/>
+                            <constraint firstItem="HJ5-eZ-bbo" firstAttribute="trailing" secondItem="bRP-XS-jNz" secondAttribute="trailing" id="Ya4-ED-hJx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZdW-XK-QMY" secondAttribute="trailing" constant="30" id="Z27-8f-d6x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qBp-Ol-qvl" secondAttribute="trailing" constant="30" id="aYX-S9-r5M"/>
+                            <constraint firstItem="qBp-Ol-qvl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cpg-2e-wdK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRP-XS-jNz" secondAttribute="trailing" constant="30" id="ob6-YK-TXG"/>
+                            <constraint firstItem="ZdW-XK-QMY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u4Q-4y-Tsa"/>
+                            <constraint firstItem="bRP-XS-jNz" firstAttribute="top" secondItem="HJ5-eZ-bbo" secondAttribute="bottom" constant="28" id="ueQ-cN-vgw"/>
+                            <constraint firstItem="HJ5-eZ-bbo" firstAttribute="top" secondItem="qBp-Ol-qvl" secondAttribute="bottom" constant="30" id="w6h-mY-qc9"/>
+                            <constraint firstItem="9nT-YI-bLn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="yy8-kK-cMq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstTextField" destination="HJ5-eZ-bbo" id="ZI7-wm-bxQ"/>
+                        <outlet property="resultLabel" destination="9nT-YI-bLn" id="zE1-fy-fed"/>
+                        <outlet property="resultLavel" destination="9nT-YI-bLn" id="b1V-gP-Acn"/>
+                        <outlet property="secondTextField" destination="HJ5-eZ-bbo" id="MJg-Hx-3zO"/>
+                        <outlet property="segmentedControl" destination="bRP-XS-jNz" id="hv1-3m-xXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>

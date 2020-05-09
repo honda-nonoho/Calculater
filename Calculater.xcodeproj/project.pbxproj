@@ -99,9 +99,9 @@
 		E2CFEDA524641CE2005E3981 /* Calculater */ = {
 			isa = PBXGroup;
 			children = (
+				E2CFEDAA24641CE2005E3981 /* ViewController.swift */,
 				E2CFEDA624641CE2005E3981 /* AppDelegate.swift */,
 				E2CFEDA824641CE2005E3981 /* SceneDelegate.swift */,
-				E2CFEDAA24641CE2005E3981 /* ViewController.swift */,
 				E2CFEDAC24641CE2005E3981 /* Main.storyboard */,
 				E2CFEDAF24641CE6005E3981 /* Assets.xcassets */,
 				E2CFEDB124641CE6005E3981 /* LaunchScreen.storyboard */,
