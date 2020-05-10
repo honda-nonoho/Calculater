@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2C8AF662467BD81002F8A85 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C8AF652467BD81002F8A85 /* ResultViewController.swift */; };
 		E2CFEDA724641CE2005E3981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFEDA624641CE2005E3981 /* AppDelegate.swift */; };
 		E2CFEDA924641CE2005E3981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFEDA824641CE2005E3981 /* SceneDelegate.swift */; };
 		E2CFEDAB24641CE2005E3981 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFEDAA24641CE2005E3981 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2C8AF652467BD81002F8A85 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E2CFEDA324641CE2005E3981 /* Calculater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CFEDA624641CE2005E3981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CFEDA824641CE2005E3981 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E2CFEDAF24641CE6005E3981 /* Assets.xcassets */,
 				E2CFEDB124641CE6005E3981 /* LaunchScreen.storyboard */,
 				E2CFEDB424641CE6005E3981 /* Info.plist */,
+				E2C8AF652467BD81002F8A85 /* ResultViewController.swift */,
 			);
 			path = Calculater;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				E2CFEDAB24641CE2005E3981 /* ViewController.swift in Sources */,
 				E2CFEDA724641CE2005E3981 /* AppDelegate.swift in Sources */,
 				E2CFEDA924641CE2005E3981 /* SceneDelegate.swift in Sources */,
+				E2C8AF662467BD81002F8A85 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
